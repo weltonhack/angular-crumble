@@ -1,3 +1,7 @@
+/**
+ * Crubmel Breadcrumbs - 0.2.3.1
+ * https://github.com/weltonhack/angular-crumble
+ */
 !function () {
     'use strict';
 
