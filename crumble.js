@@ -1,11 +1,10 @@
 /**
- * Crubmel Breadcrumbs - 0.2.3.1
+ * Crubmel Breadcrumbs - 0.2.3.2
  * https://github.com/weltonhack/angular-crumble
  */
 !function () {
     'use strict';
 
-    var ERR_NO_ROUTE = 'Could not find matching route definition for path ';
     var ERR_NO_LABEL = 'Could not find property "label" of type "String" in route'
             + ' definition for path ';
     var ERR_NO_PATH = 'No path given to getParent()';
@@ -31,8 +30,7 @@
         crumble.getCrumb = function (path) {
             var route = crumble.getRoute(path);
             if (!route) {
-                throw new Error(ERR_NO_ROUTE + JSON.stringify(path));
-                //return [];
+                return [];
             }
             if (!angular.isString(route.label)) {
                 throw new Error(ERR_NO_LABEL + JSON.stringify(path));
